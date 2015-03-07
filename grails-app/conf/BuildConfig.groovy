@@ -45,7 +45,8 @@ grails.project.dependency.resolution = {
 			  ":tomcat:7.0.50.1") {
             export = false
         }
-		compile ':plugin-config:0.2.0'
+		compile ":plugin-config:0.2.0"
         runtime ":hibernate:3.6.10.8"
+        compile ":quartz:1.0.1"
     }
 }
