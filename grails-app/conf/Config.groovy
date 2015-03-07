@@ -25,6 +25,13 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
-
-grails.plugin.databasebackups.interval = 5000
-grails.plugin.databasebackups.bucket = localConfig.databasebackups.bucket
+grails {
+	plugin {
+		databasebackups {
+			interval = 5000
+			bucket = localConfig.databasebackups.bucket
+			prefix = '-backup'
+			dateFormat = 'yyyy/MM/dd/HH-mm-ss-SSS'
+		}
+	}
+}
