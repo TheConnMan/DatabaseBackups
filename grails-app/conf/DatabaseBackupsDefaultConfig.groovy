@@ -5,6 +5,7 @@ grails {
 			prefixFormat = 'MM-SS'
 			folderFormat = 'yyyy/MM/dd/HH/'
 			filename = '-backup'
+			on = true
 		}
 	}
 }

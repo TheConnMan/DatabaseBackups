@@ -1,6 +1,6 @@
 // configuration for plugin testing - will not be included in the plugin zip
 
-def loc = ['../UserConfig.groovy'].grep { new File(it).exists() }.first();
+def loc = ['../UserConfig.groovy', 'webapps/ROOT/Jenkins.groovy'].grep { new File(it).exists() }.first();
 def localConfig = new ConfigSlurper(grailsSettings.grailsEnv).parse(new File(loc).toURI().toURL())
 
 grails.app.context = '/'
@@ -33,6 +33,7 @@ grails {
 			prefixFormat = 'MM-SS'
 			folderFormat = 'yyyy/MM/dd/HH/'
 			filename = '-backup'
+			on = true
 		}
 	}
 }
