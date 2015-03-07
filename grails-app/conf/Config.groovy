@@ -30,8 +30,9 @@ grails {
 		databasebackups {
 			interval = 5000
 			bucket = localConfig.databasebackups.bucket
-			prefix = '-backup'
-			dateFormat = 'yyyy/MM/dd/HH-mm-ss-SSS'
+			prefixFormat = 'MM-SS'
+			folderFormat = 'yyyy/MM/dd/HH/'
+			filename = '-backup'
 		}
 	}
 }
