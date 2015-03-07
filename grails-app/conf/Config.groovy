@@ -1,6 +1,6 @@
 // configuration for plugin testing - will not be included in the plugin zip
 
-def loc = ['../UserConfig.groovy'].grep { new File(it).exists() }.first();
+def loc = ['../UserConfig.groovy', 'webapps/ROOT/Jenkins.groovy'].grep { new File(it).exists() }.first();
 def localConfig = new ConfigSlurper(grailsSettings.grailsEnv).parse(new File(loc).toURI().toURL())
 
 grails.app.context = '/'
@@ -25,6 +25,15 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
-
-grails.plugin.databasebackups.interval = 5000
-grails.plugin.databasebackups.bucket = localConfig.databasebackups.bucket
+grails {
+	plugin {
+		databasebackups {
+			interval = 5000
+			bucket = localConfig.databasebackups.bucket
+			prefixFormat = 'MM-SS'
+			folderFormat = 'yyyy/MM/dd/HH/'
+			filename = '-backup'
+			on = true
+		}
+	}
+}

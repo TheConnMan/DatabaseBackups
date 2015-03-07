@@ -37,6 +37,7 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
         // runtime 'mysql:mysql-connector-java:5.1.27'
+		runtime 'com.amazonaws:aws-java-sdk:1.8.9.1'
     }
 
     plugins {
@@ -46,7 +47,7 @@ grails.project.dependency.resolution = {
             export = false
         }
 		compile ":plugin-config:0.2.0"
-        runtime ":hibernate:3.6.10.8"
+        runtime ":hibernate:3.6.10.17"
         compile ":quartz:1.0.1"
     }
 }

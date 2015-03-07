@@ -5,7 +5,9 @@ class DatabaseBackupsBootStrap {
 	def grailsApplication
 
 	def init = { servletContext ->
-		int interval = grailsApplication.mergedConfig.grails.plugin.databasebackups.interval;
-		BackupJob.schedule(interval);
+		Map config = grailsApplication.mergedConfig.grails.plugin.databasebackups;
+		if (config.on) {
+			BackupJob.schedule(config.interval);
+		}
 	}
 }
