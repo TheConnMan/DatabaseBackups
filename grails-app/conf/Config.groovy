@@ -22,3 +22,5 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+grails.plugin.databasebackups.interval = 5000
