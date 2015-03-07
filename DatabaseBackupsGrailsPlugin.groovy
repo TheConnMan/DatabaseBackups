@@ -2,7 +2,7 @@ class DatabaseBackupsGrailsPlugin {
     // the plugin version
     def version = "1.0.0"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "2.3 > *"
+    def grailsVersion = "2.0 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/error.gsp",
@@ -17,12 +17,12 @@ class DatabaseBackupsGrailsPlugin {
     def description = 'Automatic H2 database backups.'
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/database-backups"
+    def documentation = "https://github.com/TheConnMan/DatabaseBackups"
 
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "APACHE"
 
     // Details of company behind the plugin (if there is one)
 //    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
@@ -31,7 +31,7 @@ class DatabaseBackupsGrailsPlugin {
 //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
 
     // Location of the plugin's issue tracker.
-//    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
+    def issueManagement = [ system: "GitHub", url: "https://github.com/TheConnMan/DatabaseBackups/issues" ]
 
     // Online location of the plugin's browseable source code.
 //    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
